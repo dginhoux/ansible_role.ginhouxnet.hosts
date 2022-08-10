@@ -1,0 +1,29 @@
+# {{ ansible_managed }}
+
+
+## ipv4 entries
+# localhost
+127.0.0.1 localhost localhost.localdomain
+# self
+{{ ansible_default_ipv4.address }} {{ inventory_hostname }} {{ inventory_hostname_short }}
+{% if hosts_ipv4 is defined and hosts_ipv4 | length > 0 %}
+# others
+{% for host in hosts_ipv4 %}
+{{ host.ip }} {{ host.fqdn }} {{ host.hostname }}
+{% endfor %}
+{% endif %}
+
+
+## ipv6 entries
+# localhost
+::1 localhost6 localhost6.localdomain6
+# self
+{% if ansible_default_ipv6 %}
+{{ ansible_default_ipv6.address }} {{ inventory_hostname }} {{ inventory_hostname_short }}
+{% endif %}
+{% if hosts_ipv6 is defined and hosts_ipv6 | length > 0 %}
+# others
+{% for host in hosts_ipv6 %}
+{{ host.ip }} {{ host.fqdn }} {{ host.hostname }}
+{% endfor %}
+{% endif %}

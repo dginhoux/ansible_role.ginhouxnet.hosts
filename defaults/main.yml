@@ -1,0 +1,10 @@
+---
+hosts_ipv4:
+  - ip: 192.168.175.50
+    fqdn: gluster.infra.ginhoux.net
+    hostname: gluster
+  - ip: 192.168.175.50
+    fqdn: vip-gluster.infra.ginhoux.net
+    hostname: vip-gluster
+
+hosts_ipv6: []
