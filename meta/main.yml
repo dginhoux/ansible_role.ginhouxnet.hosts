@@ -1,7 +1,7 @@
 ---
 
 galaxy_info:
-  role_name: ginhouxnet.hosts
+  role_name: hosts
   description: configure hosts file
   author: dginhoux
   company: ginhouxnet
