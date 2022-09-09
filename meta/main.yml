@@ -1,5 +1,4 @@
 ---
-
 galaxy_info:
   role_name: hosts
   description: configure hosts file
@@ -25,6 +24,5 @@ galaxy_info:
   galaxy_tags:
     - hosts
     - hostsfile
-
 
 dependencies: []

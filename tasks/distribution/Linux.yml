@@ -4,13 +4,11 @@
 #     path: /etc/hosts
 #     state: absent
 
-
 # - name: create empty /etc/hosts
 #   file:
 #     path: /etc/hosts
 #     state: touch
 #     mode: 0644
-
 
 - name: create new hosts file
   template:
