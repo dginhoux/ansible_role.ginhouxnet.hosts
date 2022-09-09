@@ -14,7 +14,7 @@ Role Variables
 
 Two dicts, one for ipv4 entries, one for ipv6 entries : 
 
-```
+```yaml
 hosts_ipv4:
   - ip: 192.168.175.50
     fqdn: gluster.infra.ginhoux.net
