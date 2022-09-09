@@ -1,4 +1,4 @@
-ginhouxnet.hosts
+Ansible Role : dginhoux.hosts
 =========
 
 This ansible role populate `/etc/hosts` file
