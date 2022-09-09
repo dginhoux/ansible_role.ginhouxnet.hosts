@@ -1,18 +1,18 @@
 ginhouxnet.hosts
 =========
 
-This ansible role populate /etc/hosts file
+This ansible role populate `/etc/hosts` file
 
 Requirements
 ------------
 
-This ansible role will only run on identified OS defined on meta/main.yml
+This role is built to only run on platforms defined in `meta/main.yml`
 
 
 Role Variables
 --------------
 
-It's just two lists, one for ipv4 entries, one for ipv6 entries : 
+Two dicts, one for ipv4 entries, one for ipv6 entries : 
 
 ```
 hosts_ipv4:
@@ -30,8 +30,7 @@ hosts_ipv6: []
 Dependencies
 ------------
 
-
-
+none
 
 Example Playbook
 ----------------
@@ -47,4 +46,4 @@ BSD
 Author Information
 ------------------
 
-Dany GINHOUX
+https://github.com/dginhoux/
