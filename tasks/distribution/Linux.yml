@@ -1,17 +1,17 @@
 ---
 # - name: delete existing hosts file
-#   file:
+#   ansible.builtin.file:
 #     path: /etc/hosts
 #     state: absent
 
 # - name: create empty /etc/hosts
-#   file:
+#   ansible.builtin.file:
 #     path: /etc/hosts
 #     state: touch
 #     mode: 0644
 
 - name: create new hosts file
-  template:
+  ansible.builtin.template:
     src: hosts.j2
     dest: /etc/hosts
     mode: 0644
