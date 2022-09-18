@@ -1,0 +1,19 @@
+---
+# - name: delete existing hosts file
+#   ansible.builtin.file:
+#     path: /etc/hosts
+#     state: absent
+
+# - name: create empty /etc/hosts
+#   ansible.builtin.file:
+#     path: /etc/hosts
+#     state: touch
+#     mode: 0644
+
+- name: create new hosts file
+  ansible.builtin.template:
+    src: hosts.j2
+    dest: /etc/hosts
+    mode: 0644
+    owner: root
+    group: root
