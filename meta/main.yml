@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   role_name: hosts
-  description: configure hosts file
+  description: dginhoux.hosts
   author: Dany GINHOUX
   company: dginhoux
   license: MIT
