@@ -1,7 +1,8 @@
 ---
 galaxy_info:
   role_name: hosts
-  description: dginhoux.hosts
+  description: |
+    This ansible role populate `/etc/hosts` file.
   author: Dany GINHOUX
   company: dginhoux
   license: MIT

@@ -4,7 +4,7 @@
 
 ## DESCRIPTION
 
-This ansible role populate `/etc/hosts` file
+This ansible role populate `/etc/hosts` file.
 
 
 
