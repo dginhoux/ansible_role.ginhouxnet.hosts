@@ -4,11 +4,27 @@
 ## ipv4 entries
 # localhost
 127.0.0.1 localhost localhost.localdomain
+
 # self
 {{ ansible_default_ipv4.address }} {{ inventory_hostname }} {{ inventory_hostname_short }}
-{% if hosts_ipv4 is defined and hosts_ipv4 | length > 0 %}
-# others
-{% for host in hosts_ipv4 %}
+
+{% if hosts_ipv4_list is defined and hosts_ipv4_list is iterable %}
+# others hosts_ipv4_list
+{% for host in hosts_ipv4_list %}
+{{ host.ip }} {{ host.fqdn }} {{ host.hostname }}
+{% endfor %}
+{% endif %}
+
+{% if hosts_ipv4_list_host is defined and hosts_ipv4_list_host is iterable %}
+# others hosts_ipv4_list_host
+{% for host in hosts_ipv4_list_host %}
+{{ host.ip }} {{ host.fqdn }} {{ host.hostname }}
+{% endfor %}
+{% endif %}
+
+{% if hosts_ipv4_list_group is defined and hosts_ipv4_list_group is iterable %}
+# others hosts_ipv4_list_group
+{% for host in hosts_ipv4_list_group %}
 {{ host.ip }} {{ host.fqdn }} {{ host.hostname }}
 {% endfor %}
 {% endif %}
@@ -17,13 +33,29 @@
 ## ipv6 entries
 # localhost
 ::1 localhost6 localhost6.localdomain6
+
 # self
 {% if ansible_default_ipv6 %}
 {{ ansible_default_ipv6.address }} {{ inventory_hostname }} {{ inventory_hostname_short }}
 {% endif %}
-{% if hosts_ipv6 is defined and hosts_ipv6 | length > 0 %}
-# others
-{% for host in hosts_ipv6 %}
+
+{% if hosts_ipv6_list is defined and hosts_ipv6_list is iterable %}
+# others hosts_ipv6_list
+{% for host in hosts_ipv6_list %}
+{{ host.ip }} {{ host.fqdn }} {{ host.hostname }}
+{% endfor %}
+
+{% endif %}
+{% if hosts_ipv6_list_host is defined and hosts_ipv6_list_host is iterable %}
+# others hosts_ipv6_list_host
+{% for host in hosts_ipv6_list_host %}
+{{ host.ip }} {{ host.fqdn }} {{ host.hostname }}
+{% endfor %}
+{% endif %}
+
+{% if hosts_ipv6_list_group is defined and hosts_ipv6_list_group is iterable %}
+# others hosts_ipv6_list_group
+{% for host in hosts_ipv6_list_group %}
 {{ host.ip }} {{ host.fqdn }} {{ host.hostname }}
 {% endfor %}
 {% endif %}
