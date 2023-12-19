@@ -49,7 +49,8 @@ git clone https://github.com/dginhoux/ansible_role.hosts dginhoux.hosts
 #### EXAMPLE PLAYBOOK
 
 ```yaml
-- hosts: all
+- name: Playbook
+  hosts: all
   roles:
     - name: start role dginhoux.hosts
       ansible.builtin.include_role:
@@ -64,16 +65,25 @@ git clone https://github.com/dginhoux/ansible_role.hosts dginhoux.hosts
 Defaults variables defined in `defaults/main.yml` : 
 
 ```yaml
-hosts_ipv4:
+hosts_ipv4_list:
   - ip: 192.168.175.50
     fqdn: gluster.infra.ginhoux.net
     hostname: gluster
   - ip: 192.168.175.50
     fqdn: vip-gluster.infra.ginhoux.net
     hostname: vip-gluster
+hosts_ipv4_list_host: []
+hosts_ipv4_list_group: []
 
-hosts_ipv6: []
+hosts_ipv6_list: []
+hosts_ipv6_list_host: []
+hosts_ipv6_list_group: []
 ```
+
+NOTE : Theses 6 lists are merged. <br />
+You can use the host and group lists to specify users per host or group off hosts.
+
+
 
 #### DEFAULT OS SPECIFIC VARIABLES
 
