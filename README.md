@@ -81,7 +81,7 @@ hosts_ipv6_list_group: []
 ```
 
 NOTE : Theses 6 lists are merged. <br />
-You can use the host and group lists to specify users per host or group off hosts.
+You can use the `_host` and `_group` lists to specify per host and/or per group content.
 
 
 
