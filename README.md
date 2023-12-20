@@ -52,7 +52,7 @@ git clone https://github.com/dginhoux/ansible_role.hosts dginhoux.hosts
 - name: Playbook
   hosts: all
   roles:
-    - name: start role dginhoux.hosts
+    - name: Start role dginhoux.hosts
       ansible.builtin.include_role:
         name: dginhoux.hosts
 ```
@@ -62,7 +62,9 @@ git clone https://github.com/dginhoux/ansible_role.hosts dginhoux.hosts
 
 #### DEFAULT VARIABLES
 
-Defaults variables defined in `defaults/main.yml` : 
+Defaults variables defined in `defaults/main.yml`
+
+#### EXAMPLES VARIABLES
 
 ```yaml
 hosts_ipv4_list:
